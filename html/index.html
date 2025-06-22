@@ -2,17 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Verificar edad para conducir</title>
+  <title>Verificar si puedes conducir</title>
 </head>
 <body>
-  <h1>Hola, soy Cristofer Sosa</h1>
+  <h1>Verificación de Conducción</h1>
 
-  <label for="edad">Ingresa tu edad:</label>
-  <input type="number" id="edad" placeholder="Ej. 20">
-  <button onclick="verificarEdad()">Verificar</button>
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre" required><br><br>
 
-  <p id="resultado"></p>
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" placeholder="Tu edad" required><br><br>
 
-  <script src="js/logica.js"></script>
+    <button type="submit">Verificar</button>
+  </form>
+
+  <p id="mensaje"></p>
+
+  <script src="logica.js"></script>
 </body>
 </html>
