@@ -1,15 +1,18 @@
-let edad = prompt("¿Cuántos años tienes?");
+function verificarEdad() {
+  const edadInput = document.getElementById("edad").value;
+  const resultado = document.getElementById("resultado");
 
-if (edad === null || edad.trim() === "") {
-  alert("No ingresaste una edad válida.");
-} else {
-  edad = parseInt(edad);
+  const edad = parseInt(edadInput);
 
   if (isNaN(edad)) {
-    alert("Por favor, ingresa un número válido.");
+    resultado.textContent = "Por favor, ingresa un número válido.";
+  } else if (edad < 0 || edad > 120) {
+    resultado.textContent = "Por favor, ingresa una edad realista.";
   } else if (edad >= 18) {
-    alert("✅ Puedes conducir.");
+    resultado.textContent = "✅ Puedes conducir en Perú.";
+    console.log("Puedes conducir");
   } else {
-    alert("❌ No puedes conducir.");
+    resultado.textContent = "❌ No puedes conducir en Perú.";
+    console.log("No puedes conducir");
   }
 }
