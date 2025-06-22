@@ -15,10 +15,10 @@ document.getElementById("formulario").addEventListener("submit", function (e) {
   if (edad < 0 || edad > 120) {
     mensaje.textContent = "Por favor, ingresa una edad realista.";
   } else if (edad >= 18) {
-    mensaje.textContent = `✅ Hola ${nombre}, con ${edad} años puedes conducir.`;
+    mensaje.textContent = `✅ Hola ${nombre}, con edad de ${edad} años, si puede conducir.`;
     console.log("Puedes conducir");
   } else {
-    mensaje.textContent = `❌ Hola ${nombre}, con ${edad} años no puedes conducir.`;
+    mensaje.textContent = `❌ Hola ${nombre}, con edad de ${edad} años, no puede conducir.`;
     console.log("No puedes conducir");
   }
 });
